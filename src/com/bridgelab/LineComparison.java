@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LineComparison {
     public static void main(String[] args) {
         System.out.println("Welcome to the Line Comparison Problem by using Java");
-        // UC2 - As a fan of geometry, I want to check equality of two lines based on the end points, So that I know when two lines are the equal. - Using Java equals
+        // UC3 - As a fan of geometry, I want to compare two lines based on the end points, So that I know one line is equal, greater or less than the other line. - Using Java compareTo method to compare 2 Lengths
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the x1 co-ordinates :: ");
@@ -34,7 +34,9 @@ public class LineComparison {
 
         if (length1 == length2)
             System.out.println("Both lines were having same length");
+        else if(length1 > length2)
+            System.out.println("Length1 "+length1+" is bigger than Length2 "+length2);
         else
-            System.out.println("Both lines were having different length");
+            System.out.println("Length2 "+length2+" is bigger than Length1 "+length1);
     }
 }
