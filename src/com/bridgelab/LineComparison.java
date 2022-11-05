@@ -2,10 +2,15 @@ package com.bridgelab;
 
 import java.util.Scanner;
 
+
 public class LineComparison {
+    public static double cal_leg(int x1, int x2, int y1, int y2){
+        double length = Math.sqrt(((x2 - x1)^2) + ((y2 - y1)^2));
+        return length;
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to the Line Comparison Problem by using Java");
-        // UC3 - As a fan of geometry, I want to compare two lines based on the end points, So that I know one line is equal, greater or less than the other line. - Using Java compareTo method to compare 2 Lengths
+        // UC4 - Use Java Object Oriented Programming Concepts of Line and Point as well as equals and compareTo methods.
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the x1 co-ordinates :: ");
@@ -26,10 +31,10 @@ public class LineComparison {
         System.out.print("Enter the b2 co-ordinates :: ");
         int b2 = sc.nextInt();
 
-        double length1 = Math.sqrt((x2 - x1)^2 + (y2 - y1)^2);
+        double length1 = cal_leg(x1, x2, y1, y2);
         System.out.println("Length of the line1 is :: "+length1);
 
-        double length2 = Math.sqrt((a2 - a1)^2 + (b2 - b1)^2);
+        double length2 = cal_leg(a1, a2, b1, b2);
         System.out.println("Length of the line2 is :: "+length2);
 
         if (length1 == length2)
